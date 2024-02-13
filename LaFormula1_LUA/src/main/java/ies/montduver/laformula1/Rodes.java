@@ -33,11 +33,30 @@ public class Rodes {
     }
 
     public void setMarca(String marca) {
-        this.marca = marca;
     }
+   
+       
 
     /* TO DO: Tornarà un String segons el valor (int) de l’atribut tipo_neumatic*/
     public String getTipo_neumatic() {
+         if (tipo_neumatic == 1){
+        String tipo_neumatic = "Blanes";
+    }
+        if (tipo_neumatic == 2){
+        String tipo_neumatic = "Mitges";
+    }
+        if (tipo_neumatic == 3){
+        String tipo_neumatic = "Dures";
+    }
+        if (tipo_neumatic == 4){
+        String tipo_neumatic = "de Plutja";
+    }
+        if (tipo_neumatic == 5){
+        String tipo_neumatic = "de Plutja extrema";
+    }
+        else{
+            String tipo_neumatic = "Desconegudes"; 
+        }
        return "";
     }
 
