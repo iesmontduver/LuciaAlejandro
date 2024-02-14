@@ -10,19 +10,18 @@ package ies.montduver.laformula1;
  */
 public class Cotxe {
     
-    /* ATENCIO: Descomenta el codi següent per a que el projecte funcione (una vegada tingues totes les classes
-    indicades com a atributs creades)
-    */
     
-    //private final Rodes rodes;
-    //private final Motor motor;
-    //private final Xasis xasis;
-    //private Escuderia escuderia;
-    //private Pilot pilot;
-    //private double tempsCarrera;
+   
+    private final Rodes rodes;
+    private final Motor motor;
+    private final Xasis xasis;
+    private Escuderia escuderia;
+    private Pilot pilot;
+    private double tempsCarrera;
+
+
     
-    
-    /*public Cotxe(Escuderia escuderia, Rodes rodes, Motor motor, Xasis xasis) {
+    public Cotxe(Escuderia escuderia, Rodes rodes, Motor motor, Xasis xasis) {
         this.escuderia = escuderia;
         this.rodes = rodes;
         this.motor = motor;
@@ -70,22 +69,17 @@ public class Cotxe {
 
         }                               
     }
-    */
     
-    /* TO DO: 
-     1) Mostrarà un missatge per pantalla amb el contingut d’alguns atributs del cotxe. 
-     2) Assignarà l’atribut tempsCarrera al valor 0.0   
-    */ 
+    
+   
     public void arrancarMotors(){
-        
+        System.out.println( pilot + " ha arrancat el seu motor" +escuderia + "montat amb rodes" +rodes );
+        tempsCarrera = 0.0;
     }
     
-    /* TO DO:
-     1) Mostrarà un missatge per pantalla infromant de l’accident del cotxe.
-     2) Assignarà l’atribut tempsCarrera al valor 0.0
-    */
     public void accident(){
-              
+              System.out.println( pilot + " ha tingut un accident i ha d'abandonar la carrera" );
+              tempsCarrera = 0.0;
     }            
     
 }
