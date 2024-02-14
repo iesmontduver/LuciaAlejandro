@@ -44,7 +44,7 @@ public class Rodes {
     }
         if (tipo_neumatic == 2){
         String tipo_neumatic = "Mitges";
-    }
+    }                           
         if (tipo_neumatic == 3){
         String tipo_neumatic = "Dures";
     }
