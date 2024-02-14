@@ -9,12 +9,13 @@ package ies.montduver.laformula1;
  * @author alemangar
  */
 public class Circuit {
+
     private String nombre;
     private String pais;
     private String ciutat;
     private double longitud;
     private int numVoltes;
-    private int  record;      
+    private int record;
 
     public Circuit(String nombre, String pais, String ciutat, double longitud, int numVoltes, int record) {
         this.nombre = nombre;
@@ -23,6 +24,7 @@ public class Circuit {
         this.longitud = longitud;
         this.numVoltes = numVoltes;
         this.record = record;
+
     }
 
     public String getNombre() {
@@ -72,7 +74,5 @@ public class Circuit {
     public void setRecord(int record) {
         this.record = record;
     }
-         
-    
-    
+
 }
