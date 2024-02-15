@@ -40,6 +40,10 @@ public class Cotxe {
         return escuderia;
     }
 
+    public Rodes getRodes() {
+        return rodes;
+    }
+
     public void setEscuderia(Escuderia escuderia) {
         this.escuderia = escuderia;
     }
