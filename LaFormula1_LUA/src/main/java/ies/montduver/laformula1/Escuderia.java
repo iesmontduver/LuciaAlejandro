@@ -9,6 +9,7 @@ package ies.montduver.laformula1;
  * @author lucconlur
  */
 public class Escuderia {
+
     String nom;
     double pressupost;
     int punts;
@@ -42,6 +43,5 @@ public class Escuderia {
     public void setPunts(int punts) {
         this.punts = punts;
     }
-    
-    
+
 }

@@ -17,14 +17,18 @@ public class Circuit {
     private int numVoltes;
     private int record;
 
-    public Circuit(String nombre, String pais, String ciutat, double longitud, int numVoltes, int record) {
+    public Circuit(String nombre, String pais, String ciutat, double longitud, int numVoltes) {
         this.nombre = nombre;
         this.pais = pais;
         this.ciutat = ciutat;
         this.longitud = longitud;
         this.numVoltes = numVoltes;
-        this.record = record;
+      
 
+    }
+
+    public Circuit(int record) {
+        this.record = record;
     }
 
     public String getNombre() {

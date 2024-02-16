@@ -26,8 +26,8 @@ public class GranPremi {
 
         Cotxe guanyador = null;
         List<Cotxe> cotxesEnCarrera = new ArrayList<Cotxe>(cotxes); //copia de la original 
-        
-        System.out.println(MORADO + "\n\t\t\tBENVNGUTS AL GRAN PREMI DE " + circuit.getNombre().toUpperCase()+ RESET);
+
+        System.out.println(MORADO + "\n\t\t\tBENVNGUTS AL GRAN PREMI DE " + circuit.getNombre().toUpperCase() + RESET);
         Thread.sleep(1000);
         System.out.println(BLUE + "\n\t\t\tEngegant els motors..." + RESET);
         Thread.sleep(2000);
@@ -122,8 +122,8 @@ public class GranPremi {
 
         /* Acabada la carrera es donen punts als 5 primers pilots segons el seu temps (10, 8, 6, 4 i 2 punts) */
         guanyador = puntuarCotxes(cotxesEnCarrera, cotxes);
-        
-        return guanyador; 
+
+        return guanyador;
     }
 
     private static Cotxe cotxeAleatori(List<Cotxe> cotxesEnCarrera) {
@@ -131,8 +131,10 @@ public class GranPremi {
         return cotxesEnCarrera.get(numero);
     }
 
-    /** Aquest mètode tornara actualitzarà la puntación de la llista de cotxes, sumant 
-     * els punts als 5 primers qualificats de la carrera */
+    /**
+     * Aquest mètode tornara actualitzarà la puntación de la llista de cotxes,
+     * sumant els punts als 5 primers qualificats de la carrera
+     */
     private static Cotxe puntuarCotxes(List<Cotxe> cotxesEnCarrera, List<Cotxe> cotxes) {
         List<Cotxe> listaAux = new ArrayList<Cotxe>(cotxesEnCarrera); //copia de la original 
         List<Cotxe> listaOrdenada = new ArrayList<Cotxe>();
@@ -143,32 +145,36 @@ public class GranPremi {
 
             while (co.hasNext()) {
                 Cotxe el_cotxe = co.next();
-                
+
                 if (el_cotxe.getTempsCarrera() < mesRapid.getTempsCarrera()) {
                     mesRapid = el_cotxe;
                 }
             }
             listaOrdenada.add(mesRapid);
-            listaAux.remove(listaAux.indexOf(mesRapid));            
-        }       
-            
-        for (int i=0; i<cotxes.size();i++)
-        {
-            if (listaOrdenada.get(0).getPilot().getNom().equals(cotxes.get(i).getPilot().getNom()))
+            listaAux.remove(listaAux.indexOf(mesRapid));
+        }
+
+        for (int i = 0; i < cotxes.size(); i++) {
+            if (listaOrdenada.get(0).getPilot().getNom().equals(cotxes.get(i).getPilot().getNom())) {
                 cotxes.get(i).getPilot().setPunts(cotxes.get(i).getPilot().getPunts() + 10);
-            
-            if (listaOrdenada.get(1).getPilot().getNom().equals(cotxes.get(i).getPilot().getNom()))
+            }
+
+            if (listaOrdenada.get(1).getPilot().getNom().equals(cotxes.get(i).getPilot().getNom())) {
                 cotxes.get(i).getPilot().setPunts(cotxes.get(i).getPilot().getPunts() + 8);
-            
-            if (listaOrdenada.get(2).getPilot().getNom().equals(cotxes.get(i).getPilot().getNom()))
+            }
+
+            if (listaOrdenada.get(2).getPilot().getNom().equals(cotxes.get(i).getPilot().getNom())) {
                 cotxes.get(i).getPilot().setPunts(cotxes.get(i).getPilot().getPunts() + 6);
-            
-            if (listaOrdenada.get(3).getPilot().getNom().equals(cotxes.get(i).getPilot().getNom()))
+            }
+
+            if (listaOrdenada.get(3).getPilot().getNom().equals(cotxes.get(i).getPilot().getNom())) {
                 cotxes.get(i).getPilot().setPunts(cotxes.get(i).getPilot().getPunts() + 4);
-            
-            if (listaOrdenada.get(4).getPilot().getNom().equals(cotxes.get(i).getPilot().getNom()))
+            }
+
+            if (listaOrdenada.get(4).getPilot().getNom().equals(cotxes.get(i).getPilot().getNom())) {
                 cotxes.get(i).getPilot().setPunts(cotxes.get(i).getPilot().getPunts() + 2);
-                       
+            }
+
         }
 
         return listaOrdenada.get(0);

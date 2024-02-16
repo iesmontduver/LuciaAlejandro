@@ -9,7 +9,7 @@ package ies.montduver.laformula1;
  * @author alemangar
  */
 public class Pilot {
-    
+
     private String nom;
     private Escuderia escuderia;
     private int numero;
@@ -63,7 +63,5 @@ public class Pilot {
     public void setSou(double sou) {
         this.sou = sou;
     }
-    
-    
-    
+
 }
