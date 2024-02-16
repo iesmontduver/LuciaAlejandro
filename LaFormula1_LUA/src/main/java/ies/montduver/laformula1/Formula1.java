@@ -188,7 +188,16 @@ public class Formula1 {
         cotxes.add(c10);
        
         //Assignar un cotxe a cada pilot 
-        c4.setPilot(Norris);
+        c1.setPilot(Norris);
+        c2.setPilot(Piastri);
+        c3.setPilot(Alonso);
+        c4.setPilot(Stroll);
+        c5.setPilot(Hamilton);
+        c6.setPilot(Russell);
+        c7.setPilot(Sainz);
+        c8.setPilot(Leclerc);
+        c9.setPilot(Pérez);
+        c10.setPilot(Verstappen);
         
     }    
 }
